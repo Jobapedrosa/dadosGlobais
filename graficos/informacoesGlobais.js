@@ -6,7 +6,7 @@ async function vizualizarInformacoesGlobais() {
     const pessoasMundo = (dados.total_pessoas_mundo / 1e9)
     const pessoasComAcessoAEducacao = (dados.total_pessoas_com_acesso_a_educacao / 1e9)
     const horas = parseInt(dados.tempo_medio_dia_estudando)
-    const minutos = Math.round((dados.tempo_medio - horas) * 60)
+    const minutos = Math.round((dados.tempo_medio_dia_estudando - horas) * 60)
     const pessoasComEducacaoSuperior = (dados.total_pessoas_com_educacao_superior / 1e9)
 
 
