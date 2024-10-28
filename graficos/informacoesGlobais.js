@@ -6,13 +6,14 @@ async function vizualizarInformacoesGlobais() {
     const pessoasMundo = (dados.total_pessoas_mundo / 1e9)
     const pessoasComAcessoAEducacao = (dados.total_pessoas_com_acesso_a_educacao / 1e9)
     const horas = parseInt(dados.tempo_medio_dia_estudando)
+    const minutos = Math.round((dados.tempo_medio - horas) * 60)
     const pessoasComEducacoSuperior = (dados.total_pessoas_com_educacao_superior / 1e9)
     
 
 
     const paragrafo = document.createElement('p')
     paragrafo.classList.add('graficos-container__texto')
-    paragrafo.innerHTML =  `Você sabia que o total total de pessoas no mundo é de <span>${pessoasMundo}</span> bilhões de pessoas e que o  total de pessoas com acesso à educação é de <span>${pessoasComAcessoAEducacao}</span> bilhões? O tempo médio gasto por dia estudando é de <span>${horas} horas </span> e o total de pessoas com educação superior é de <span>${pessoasComEducacoSuperior}</span> bilhões. <br>Será que esses dados apontam para uma realidade de um mundo esclarecido e com facilidade de acesso à Educação?` 
+    paragrafo.innerHTML =  `Você sabia que o total total de pessoas no mundo é de <span>${pessoasMundo}</span> bilhões de pessoas e que o  total de pessoas com acesso à educação é de <span>${pessoasComAcessoAEducacao}</span> bilhões? O tempo médio gasto por dia estudando é de <span>${horas} horas </span> e<span>${minutos} e o total de pessoas com educação superior é de <span>${pessoasComEducacoSuperior}</span> bilhões. <br>Será que esses dados apontam para uma realidade de um mundo esclarecido e com facilidade de acesso à Educação?` 
     const container = document.getElementById('graficos-container')
     container.appendChild(paragrafo);
 }
