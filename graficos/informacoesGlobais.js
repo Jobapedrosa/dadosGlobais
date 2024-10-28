@@ -3,8 +3,6 @@ const url='https://raw.githubusercontent.com/silviosnjr/CienciaDeDados-CriandoGr
 async function vizualizarInformacoesGlobais() {
     const res = await fetch(url)
     const dados = await res.json()
-    //console.log(dados)
-    
     const pessoasMundo = (dados.total_pessoas_mundo / 1e9)
     const pessoasComAcessoAEducacao = (dados.total_pessoas_com_acesso_a_educacao / 1e9)
     const horas = parseInt(dados.tempo_medio_dia_estudando)
