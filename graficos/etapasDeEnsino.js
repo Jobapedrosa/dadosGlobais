@@ -12,7 +12,7 @@ async function etapasDeEnsino() {
         y: quantidadeEstudantes,
         type: 'bar',
         marker: {
-          color: getCSS('--primary-color')
+             color: getComputedStyle(document.body).getPropertyValue('--primary-color')
       }
     }
  ]
