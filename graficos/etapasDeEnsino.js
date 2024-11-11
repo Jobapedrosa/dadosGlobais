@@ -21,7 +21,6 @@ async function etapasDeEnsino() {
     paper_bgcolor: getCSS('--bg-color'),
     title: {
         text: "Quantidade de Estudantes no Mundo",
-        x: 0,
         font: {
             color: getCSS('--primary-color'),
             family: getCSS('--font'),
